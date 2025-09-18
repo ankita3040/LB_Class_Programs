@@ -1,0 +1,57 @@
+1import java.util.*;
+ 
+ class Number
+ {
+    public  void SumofFactorNonFactor(int iNo)
+    {
+        if(iNo < 0)
+        {
+            iNo = -iNo;
+        }
+        int iCnt = 0, iSum1 = 0, iSum2 = 0;
+
+        for(iCnt = 1; iCnt <= iNo  ; iCnt++)
+        {
+            if((iNo % iCnt) == 0)
+            {
+                iSum1 = iSum1 + iCnt;
+              
+            }
+            else
+            {
+                iSum2 = iSum2 + iCnt;
+              
+            }
+
+          
+        }
+        System.out.println("Summation of Factor is "+iSum1);
+        System.out.println("summation of non factor is "+iSum2);
+
+       
+
+       
+    }
+ }
+class program64
+{
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+       
+
+        System.out.println("Enter number : ");
+        int iValue = sobj.nextInt();
+      
+
+
+        Number eobj =new Number();
+
+        eobj.SumofFactorNonFactor(iValue);
+
+        
+
+        
+       
+    }
+}
